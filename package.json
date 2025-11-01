@@ -1,6 +1,6 @@
 {
   "name": "@qius.solutions/qiusflex",
-  "version": "3.2.2",
+  "version": "3.3.0",
   "description": "QiusFlex - CSS utilities powered by Qius Solutions",
   "publishConfig": {
     "access": "public"
@@ -12,9 +12,6 @@
   },
   "main": "dist/primeflex.css",
   "style": "dist/primeflex.css",
-  "files": [
-    "dist"
-  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/qius-solutions/qiusflex"
