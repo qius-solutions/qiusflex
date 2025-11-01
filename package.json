@@ -1,7 +1,10 @@
 {
-  "name": "@qius/qiusflex",
+  "name": "@qius.solutions/qiusflex",
   "version": "3.2.1",
   "description": "QiusFlex - CSS utilities powered by Qius Solutions",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "serve": "jekyll serve --livereload",
     "build-app": "jekyll build --config _config_prod.yml",
