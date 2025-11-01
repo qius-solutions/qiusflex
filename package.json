@@ -1,0 +1,43 @@
+{
+  "name": "@qius/qiusflex",
+  "version": "3.2.1",
+  "description": "QiusFlex - CSS utilities powered by Qius Solutions",
+  "scripts": {
+    "serve": "jekyll serve --livereload",
+    "build-app": "jekyll build --config _config_prod.yml",
+    "build-lib": "sass --update _sass/lib/primeflex.scss:dist/primeflex.css --no-source-map && sass --update _sass/lib/primeflex.scss:dist/primeflex.min.css --no-source-map --style compressed && sass --update _sass/lib/themes:dist/themes && gulp copy-lib"
+  },
+  "main": "dist/primeflex.css",
+  "style": "dist/primeflex.css",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qius-solution/qiusflex"
+  },
+  "keywords": [
+    "grid",
+    "responsive",
+    "flex",
+    "css utility"
+  ],
+  "author": "Qius Solutions <qius.solutions@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/qius-solutions/qiusflex/issues"
+  },
+  "homepage": "https://github.com/qius-solutions/qiusflex#readme",
+  "devDependencies": {
+    "sass": "^1.79.4",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-flatten": "^0.4.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-uglifycss": "^1.0.6"
+  },
+  "dependencies": {
+    "simple-jekyll-search": "^1.9.2"
+  }
+}
