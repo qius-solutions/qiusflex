@@ -8,7 +8,7 @@
   "scripts": {
     "serve": "jekyll serve --livereload",
     "build-app": "jekyll build --config _config_prod.yml",
-    "build-lib": "sass --update _sass/lib/qiusflex.scss:dist/qiusflex.css --no-source-map && sass --update _sass/lib/qiusflex.scss:dist/qiusflex.min.css --no-source-map --style compressed && sass --update _sass/lib/themes:dist/themes && gulp copy-lib"
+    "build-lib": "sass --update _sass/lib/qiusflex.scss:dist/qiusflex.css --no-source-map --style expanded && sass --update _sass/lib/qiusflex.scss:dist/qiusflex.min.css --no-source-map --style compressed && sass --update _sass/lib/themes:dist/themes && gulp copy-lib && gulp generate-package"
   },
   "main": "dist/qiusflex.css",
   "style": "dist/qiusflex.css",
