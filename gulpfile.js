@@ -3,26 +3,33 @@
 var gulp = require('gulp');
 const fs = require("fs");
 
-gulp.task('copy-lib', function () {
+gulp.task('generate-lib', function () {
     return gulp.src([
         '_sass/lib/**/*',
     ])
         .pipe(gulp.dest('dist/'));
 });
 
-gulp.task("generate-package", (done) => {
+gulp.task('generate-readme', function () {
+    return gulp.src([
+        './README.md',
+    ])
+        .pipe(gulp.dest('dist/'));
+});
+
+gulp.task("generate-package-json", (done) => {
     const packageData = {
         name: "@qius.solutions/qiusflex",
-        version: "4.0.3",
+        version: "4.0.5",
         description: "QiusFlex - CSS utilities powered by Qius Solutions",
         repository: {
             type: "git",
             url: "git+https://github.com/qius-solutions/qiusflex.git",
         },
         keywords: [
-            "grid", 
-            "responsive", 
-            "flex", 
+            "grid",
+            "responsive",
+            "flex",
             "css utility"
         ],
         author: "Qius Solutions <qius.solutions@gmail.com>",
