@@ -1,4 +1,4 @@
-var PrimeFlex = {
+var QiusFlex = {
 
     init: function () {
         this.documentation = document.getElementById('doc');
@@ -152,12 +152,12 @@ var PrimeFlex = {
         const isLight = this.hasClass(e.currentTarget.firstElementChild, 'pi-moon');
 
         if (isLight) {
-            urlTokens[urlTokens.length - 1] = 'primeflex-arya.css';
+            urlTokens[urlTokens.length - 1] = 'qiusflex-arya.css';
             this.addClass(document.body, 'layout-wrapper-dark');
             this.removeClass(document.body, 'layout-wrapper-light');
         }
         else {
-            urlTokens[urlTokens.length - 1] = 'primeflex-saga.css';
+            urlTokens[urlTokens.length - 1] = 'qiusflex-saga.css';
             this.addClass(document.body, 'layout-wrapper-light');
             this.removeClass(document.body, 'layout-wrapper-dark');
         }
@@ -178,17 +178,17 @@ var PrimeFlex = {
 
         var colorSchemeUrl = window.localStorage.getItem('color-scheme-url');
 
-        if(colorSchemeUrl.endsWith('assets/css/primeflex-arya.css')) {
-            topbarLogoLink.src = "assets/images/primeflex-logo-white.svg";
+        if(colorSchemeUrl.endsWith('assets/css/qiusflex-arya.css')) {
+            topbarLogoLink.src = "assets/images/qiusflex-logo-white.svg";
             mobileLogoLink.src = "assets/images/logo-text-light.svg";
-            footerLogoLink.src = "assets/images/prime-logo-white.svg";
+            footerLogoLink.src = "assets/images/qius-logo-white.svg";
             this.removeClass(this.schemeButton.childNodes[1], 'pi-moon');
             this.addClass(this.schemeButton.childNodes[1], 'pi-sun');
         }
         else {
-            topbarLogoLink.src = "assets/images/primeflex-logo-dark.svg";
+            topbarLogoLink.src = "assets/images/qiusflex-logo-dark.svg";
             mobileLogoLink.src = "assets/images/logo-text-dark.svg";
-            footerLogoLink.src = "assets/images/prime-logo-dark.svg";
+            footerLogoLink.src = "assets/images/qius-logo-dark.svg";
             this.removeClass(this.schemeButton.childNodes[1], 'pi-sun');
             this.addClass(this.schemeButton.childNodes[1], 'pi-moon');
         }
@@ -266,5 +266,5 @@ var PrimeFlex = {
     }
 }
 
-PrimeFlex.init();
+QiusFlex.init();
 
