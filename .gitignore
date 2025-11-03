@@ -12,7 +12,7 @@ Gemfile.lock
 package-lock.json
 
 dist/src
-dist/primeflex.scss
+dist/qiusflex.scss
 dist/themes/*.scss
 
 node_modules

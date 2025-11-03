@@ -1,9 +1,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![npm version](https://badge.fury.io/js/primeflex.svg)](https://badge.fury.io/js/primeflex)
+[![npm version](https://badge.fury.io/js/qiusflex.svg)](https://badge.fury.io/js/qiusflex)
 
-# PrimeFlex
-PrimeFlex is a lightweight responsive CSS utility library to accompany Prime UI libraries and static webpages as well.
+# QiusFlex
+QiusFlex is a lightweight responsive CSS utility library to accompany Qius UI libraries and static webpages as well.
 
-See [PrimeFlex homepage](http://www.primefaces.org/primeflex) for live showcase and documentation.
+See [QiusFlex homepage](http://www.qiusfaces.org/qiusflex) for live showcase and documentation.
 
-![alt text](http://www.primefaces.org/images/primeflex.jpg "PrimeFlex")
+![alt text](http://www.qiusfaces.org/images/qiusflex.jpg "QiusFlex")
