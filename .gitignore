@@ -11,8 +11,7 @@ _site
 Gemfile.lock
 package-lock.json
 
-dist/src
-dist/qiusflex.scss
-dist/themes/*.scss
+dist
+dist/*
 
 node_modules
