@@ -1,17 +1,15 @@
 {
   "name": "@qius.solutions/qiusflex",
-  "version": "3.3.0",
+  "version": "4.0.5",
   "description": "QiusFlex - CSS utilities powered by Qius Solutions",
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "serve": "jekyll serve --livereload",
-    "build-app": "jekyll build --config _config_prod.yml",
-    "build-lib": "sass --update _sass/lib/primeflex.scss:dist/primeflex.css --no-source-map && sass --update _sass/lib/primeflex.scss:dist/primeflex.min.css --no-source-map --style compressed && sass --update _sass/lib/themes:dist/themes && gulp copy-lib"
+    "build-lib": "sass --update _sass/lib/qiusflex.scss:dist/qiusflex.css --no-source-map --style expanded && sass --update _sass/lib/qiusflex.scss:dist/qiusflex.min.css --no-source-map --style compressed && sass --update _sass/lib/themes:dist/themes && gulp generate-lib && gulp generate-readme && gulp generate-package-json"
   },
-  "main": "dist/primeflex.css",
-  "style": "dist/primeflex.css",
+  "main": "dist/qiusflex.css",
+  "style": "dist/qiusflex.css",
   "repository": {
     "type": "git",
     "url": "https://github.com/qius-solutions/qiusflex"
@@ -36,8 +34,5 @@
     "gulp-rename": "^2.0.0",
     "gulp-uglify": "^3.0.2",
     "gulp-uglifycss": "^1.0.6"
-  },
-  "dependencies": {
-    "simple-jekyll-search": "^1.9.2"
   }
 }

@@ -11,8 +11,7 @@ _site
 Gemfile.lock
 package-lock.json
 
-dist/src
-dist/primeflex.scss
-dist/themes/*.scss
+dist
+dist/*
 
 node_modules
