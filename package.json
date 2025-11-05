@@ -1,12 +1,12 @@
 {
   "name": "@qius.solutions/qiusflex",
-  "version": "4.0.5",
+  "version": "4.0.7",
   "description": "QiusFlex - CSS utilities powered by Qius Solutions",
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "build-lib": "sass --update _sass/lib/qiusflex.scss:dist/qiusflex.css --no-source-map --style expanded && sass --update _sass/lib/qiusflex.scss:dist/qiusflex.min.css --no-source-map --style compressed && sass --update _sass/lib/themes:dist/themes && gulp generate-lib && gulp generate-readme && gulp generate-package-json"
+    "build:package": "sass --update _sass/lib/qiusflex.scss:dist/qiusflex.css --no-source-map --style expanded && sass --update _sass/lib/qiusflex.scss:dist/qiusflex.min.css --no-source-map --style compressed && sass --update _sass/lib/themes:dist/themes && gulp generate-lib && gulp generate-readme && gulp generate-package-json"
   },
   "main": "dist/qiusflex.css",
   "style": "dist/qiusflex.css",

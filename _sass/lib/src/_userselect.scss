@@ -1,3 +1,6 @@
+@use '_variables' as *;
+@use '_mixins' as *;
+
 $userselect-props: (
     'select-none': 'none',
     'select-text': 'text',
