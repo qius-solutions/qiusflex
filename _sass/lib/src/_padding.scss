@@ -1,3 +1,5 @@
+@use '_variables' as *;
+
 .p-pt-0 {padding-top:0 !important;}
 .p-pt-1 {padding-top:$spacer * 0.25 !important;}
 .p-pt-2 {padding-top:$spacer * 0.5 !important;}

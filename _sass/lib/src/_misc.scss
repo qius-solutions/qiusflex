@@ -1,3 +1,6 @@
+@use '_variables' as *;
+@use '_mixins' as *;
+
 $appearance-props: (
     'appearance-none': none
 ) !default;

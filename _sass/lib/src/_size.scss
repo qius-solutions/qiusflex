@@ -1,4 +1,6 @@
 @use 'sass:map';
+@use '_variables' as *;
+@use '_mixins' as *;
 
 @function size-map($default, $prefix, $size: 30) {
     $size-map: ();

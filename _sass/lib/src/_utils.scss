@@ -1,9 +1,13 @@
+@use "sass:list";
+@use "sass:string";
+@use '_variables' as *;
+
 @mixin styleclass($metas) {
    @each $meta in str-split($metas) {
-      $actionSeparatorIndex: str-index(quote($meta), ':');
+      $actionSeparatorIndex: string.index(string.quote($meta), ':');
 
       @if $actionSeparatorIndex and $actionSeparatorIndex >= 0 {
-         @extend .#{str-slice($meta, 0, $actionSeparatorIndex - 1) + '\\:' + str-slice($meta, $actionSeparatorIndex + 1, -1)} !optional;
+         @extend .#{string.slice($meta, 0, $actionSeparatorIndex - 1) + '\\:' + string.slice($meta, $actionSeparatorIndex + 1, -1)} !optional;
       }
       @else {
          @extend .#{$meta} !optional;
@@ -13,13 +17,13 @@
  
 @function str-split($string, $separator: ' ') {
    $split-arr: ();
-   $index: str-index($string, $separator);
+   $index: string.index($string, $separator);
    @while $index != null {
-      $item: str-slice($string, 1, $index - 1);
-      $split-arr: append($split-arr, $item);
-      $string: str-slice($string, $index + 1);
-      $index : str-index($string, $separator);
+      $item: string.slice($string, 1, $index - 1);
+      $split-arr: list.append($split-arr, $item);
+      $string: string.slice($string, $index + 1);
+      $index : string.index($string, $separator);
    }
 
-   @return append($split-arr, $string);
+   @return list.append($split-arr, $string);
 }

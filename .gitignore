@@ -7,9 +7,6 @@ vendor
 /.sass-cache
 .DS_STORE
 .idea
-_site
-Gemfile.lock
-package-lock.json
 
 dist
 dist/*

@@ -1,3 +1,6 @@
+@use '_variables' as *;
+@use '_mixins' as *;
+
 $animationPerspective: 2000px !default;
 
 @keyframes fadein {
