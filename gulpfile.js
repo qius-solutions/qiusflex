@@ -20,7 +20,7 @@ gulp.task('generate-readme', function () {
 gulp.task("generate-package-json", (done) => {
     const packageData = {
         name: "@qius.solutions/qiusflex",
-        version: "4.0.6",
+        version: "4.0.7",
         description: "QiusFlex - CSS utilities powered by Qius Solutions",
         repository: {
             type: "git",
