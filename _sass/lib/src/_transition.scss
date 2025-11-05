@@ -1,3 +1,6 @@
+@use '_variables' as *;
+@use '_mixins' as *;
+
 $transition-property-props: (
     'transition-none': 'none',
     'transition-all': 'all',

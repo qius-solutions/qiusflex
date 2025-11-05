@@ -1,4 +1,7 @@
+@use "sass:list";
+@use "sass:string";
 @use 'sass:math';
+@use '_variables' as *;
 
 @mixin style-class($prop, $map, $responsive: false, $states: false) {
     @each $key, $val in $map {
@@ -138,7 +141,7 @@
 
 @mixin border-class($name, $directions, $scales) {
     @each $dir, $prop in $directions {
-        @for $i from 0 through length($scales) - 1 {
+        @for $i from 0 through list.length($scales) - 1 {
             $borderValue: if($i == 0, 'none', $i);
             $className: #{$name}-#{$dir}-#{$borderValue};
             @if ($dir == '') {
@@ -147,7 +150,7 @@
             
             .#{$prefix}#{$className} {
                 @each $propName in $prop {
-                    #{$propName}-width: nth($scales, $i + 1) !important;
+                    #{$propName}-width: list.nth($scales, $i + 1) !important;
                     #{$propName}-style: if($i == 0, none, solid);
                 }
             }
@@ -158,7 +161,7 @@
         @media screen and (min-width: #{$val}) {
             .#{$key + $separator} {
                 @each $dir, $prop in $directions {
-                    @for $i from 0 through length($scales) - 1 {
+                    @for $i from 0 through list.length($scales) - 1 {
                         $borderValue: if($i == 0, 'none', $i);
                         $className: #{$name}-#{$dir}-#{$borderValue};
                         @if ($dir == '') {
@@ -167,7 +170,7 @@
                         
                         &#{$prefix}#{$className} {
                             @each $propName in $prop {
-                                #{$propName}-width: nth($scales, $i + 1) !important;
+                                #{$propName}-width: list.nth($scales, $i + 1) !important;
                                 #{$propName}-style: if($i == 0, none, solid);
                             }
                         }
@@ -182,11 +185,11 @@
     @each $key, $val in $map {
         $prefixName: $key;
         $suffixName: '';
-        $index: str-index($key, 'border-round');
+        $index: string.index($key, 'border-round');
 
         @if $index != null {
             $prefixName: 'border-round';
-            $suffixName: str-slice($key, str-length('border-round') + 1, str-length($key));
+            $suffixName: string.slice($key, string.length('border-round') + 1, string.length($key));
         }
 
         @each $dir, $prop in $directions {
@@ -204,11 +207,11 @@
                 @each $key, $val in $map {
                     $prefixName: $key;
                     $suffixName: '';
-                    $index: str-index($key, 'border-round');
+                    $index: string.index($key, 'border-round');
             
                     @if $index != null {
                         $prefixName: 'border-round';
-                        $suffixName: str-slice($key, str-length('border-round') + 1, str-length($key));
+                        $suffixName: string.slice($key, string.length('border-round') + 1, string.length($key));
                     }
             
                     @each $dir, $prop in $directions {
@@ -270,19 +273,19 @@
     $inPrefix: $prefix + $inPrefix;
 
     @each $name, $prop in $map {
-        @for $i from 0 through length($scales) - 1 {
+        @for $i from 0 through list.length($scales) - 1 {
             .#{$inPrefix}#{$name}-#{$i} {
                 @each $propName in $prop {
-                    #{$propName}: $spacer * nth($scales, $i + 1) !important;
+                    #{$propName}: $spacer * list.nth($scales, $i + 1) !important;
                 }
             }
         }
 
         @if ($negative) {
-            @for $i from 1 through length($scales) - 1 {
+            @for $i from 1 through list.length($scales) - 1 {
                 .-#{$inPrefix}#{$name}-#{$i} {
                     @each $propName in $prop {
-                        #{$propName}: -1 * $spacer * nth($scales, $i + 1) !important;
+                        #{$propName}: -1 * $spacer * list.nth($scales, $i + 1) !important;
                     }
                 }
             }
@@ -301,19 +304,19 @@
         @each $key, $val in $breakpoints {
             @media screen and (min-width: #{$val}) {
                 @each $name, $prop in $map {
-                    @for $i from 0 through length($scales) - 1 {
+                    @for $i from 0 through list.length($scales) - 1 {
                         .#{$key + $separator}#{$inPrefix}#{$name}-#{$i} {
                             @each $propName in $prop {
-                                #{$propName}: $spacer * nth($scales, $i + 1) !important;;
+                                #{$propName}: $spacer * list.nth($scales, $i + 1) !important;;
                             }
                         }
                     }
 
                     @if ($negative) {
-                        @for $i from 1 through length($scales) - 1 {
+                        @for $i from 1 through list.length($scales) - 1 {
                             .#{$key + $separator}-#{$inPrefix}#{$name}-#{$i} {
                                 @each $propName in $prop {
-                                    #{$propName}: -1 * $spacer * nth($scales, $i + 1) !important;
+                                    #{$propName}: -1 * $spacer * list.nth($scales, $i + 1) !important;
                                 }
                             }
                         }

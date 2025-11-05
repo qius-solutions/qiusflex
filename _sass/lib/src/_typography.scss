@@ -1,3 +1,6 @@
+@use '_variables' as *;
+@use '_mixins' as *;
+
 $text-align-props: (
     'text-center': center,
     'text-justify': justify,

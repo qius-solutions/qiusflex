@@ -1,3 +1,6 @@
+@use '_variables' as *;
+@use '_mixins' as *;
+
 $flex-direction: (
     'flex-row': row,
     'flex-row-reverse': row-reverse,

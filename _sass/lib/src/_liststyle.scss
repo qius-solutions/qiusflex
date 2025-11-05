@@ -1,3 +1,6 @@
+@use '_variables' as *;
+@use '_mixins' as *;
+
 $list-style-props: (
     'list-none': 'none',
     'list-disc': 'disc',

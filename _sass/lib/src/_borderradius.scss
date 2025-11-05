@@ -1,3 +1,6 @@
+@use '_variables' as *;
+@use '_mixins' as *;
+
 $border-radius-props: (
     'border-noround': 0,
     'border-round': var(--border-radius),
